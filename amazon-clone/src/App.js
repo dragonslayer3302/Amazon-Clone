@@ -1,6 +1,7 @@
 import './App.css';
 import Header from "./Header";
 import Home from './Home';
+import Checkout from './Checkout'
 import {BrowserRouter as Router, Switch, Route }
 from "react-router-dom";
 
@@ -9,13 +10,16 @@ function App() {
     //BEM Naming Convention
     <Router>
       <div className="app">
+        <Header />
+
         <Switch>
+          <Route path="/login">
+            <h1>Login Page</h1>
+          </Route>
           <Route path="/checkout">
-            <Header />
-            <h1>I am a Checkout</h1>
+            <Checkout />
           </Route>
           <Route path="/">
-            <Header />
             <Home />
           </Route>
         </Switch>
