@@ -3,6 +3,7 @@ import './App.css';
 import Header from "./Header";
 import Home from './Home';
 import Checkout from './Checkout'
+import Payment from './Payment'
 import {BrowserRouter as Router, Switch, Route }
 from "react-router-dom";
 import Login from './Login';
@@ -48,6 +49,10 @@ function App() {
           <Route path="/checkout">
             <Header />
             <Checkout />
+          </Route>
+          <Route path="/payment">
+            <Header />
+            <Payment />
           </Route>
           <Route path="/">
             <Header />

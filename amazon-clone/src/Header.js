@@ -34,7 +34,7 @@ function Header() {
         <Link to={!State.user && '/login'}> {/*only redirect to login page when there is no user*/}
             <div onClick={handleAuthentication} className="header__option">
                 <span className="header__optionLineOne">
-                    Hello Guest
+                    Hello {!State.user ? 'Guest':State.user.email}
                 </span>
                 <span className="header__optionLineTwo">
                     {State.user ? 'Sign Out': 'Sign In'}
